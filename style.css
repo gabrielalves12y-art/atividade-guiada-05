@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+
+}
+
+{
+    background-image: url('');
+    background-size: cover;
+}
+.corpodapokedex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+    border: black solid 2px;
+    border-radius: 5%;
+    width: 500px;
+}
+
+p {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.pesquisarpokemon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5px 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+.buscarpokemon {
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    padding: 5px 16px;
+    background-color: floralwhite;
+    color: white;
+    border: black solid 2px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
