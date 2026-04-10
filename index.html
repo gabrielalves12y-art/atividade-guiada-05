@@ -3,23 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pokedéx</title>
+    <title>Pokédex</title>
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-        <section>
+    <section>
         <div class="corpodapokedex">
             <img src="img/pokeball_PNG29.png" alt="pokebola"
                 style="width: 100px; height: 100px; margin-bottom: 20px;">
-            <h1>Pokedéx</h1>
+            <h1>Pokédex</h1>
             <p>Descubra informações sobre seus Pokémon favoritos!</p>
-            <input class="buscarpokemon" type="text" id="searchInput" placeholder="Ex: Mew ou 151">
-            <button class="pesquisarpokemon" id="searchButton">Pesquisar</button>
-            <div id="pokeInfo"></div>
-        </div>
-        <div>
-            
+            <input class="buscarpokemon" type="text" id="search-input" placeholder="Ex: Mew ou 151">
+            <button class="pesquisarpokemon" id="search-btn">Pesquisar</button>
+
+            <div id="error-area" class="oculto error-area"></div>
+            <div id="loading-area" class="oculto loading-area">Buscando Pokémon...</div>
+
+            <div class="bordainterna">
+                <div id="result-area" class="oculto">
+                    <img id="pokemon-sprite" src="" alt="">
+                    <p id="pokemon-id"></p>
+                    <h2 id="pokemon-name"></h2>
+                    <div id="types-row" class="types-row"></div>
+                    <div class="pokemon-status">
+                        <p><strong>Altura:</strong> <span id="pokemon-altura"></span></p>
+                        <p><strong>Peso:</strong> <span id="pokemon-peso"></span></p>
+                        <p><strong>Vida:</strong> <span id="pokemon-vida"></span></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script src="script.js"></script>
