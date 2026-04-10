@@ -26,11 +26,11 @@ async function buscarPokemon(identificador) {
     const resposta = await fetch(endpoint);
 
     if (!resposta.ok) {
-    throw new Error(`Pokémon não encontrado (status ${resposta.status})`);
-}
+        throw new Error(`Pokémon não encontrado (status ${resposta.status})`);
+    }
 
     const dados = await resposta.json();
-        return dados;
+    return dados;
 }
 
 function exibirResultado(dados) {
@@ -42,15 +42,15 @@ function exibirResultado(dados) {
 
     typesRow.innerHTML = '';
     dados.types.forEach(function (entrada) {
-    const badge = document.createElement('span');
-    badge.className = `type-badge type-${entrada.type.name}`;
-    badge.textContent = entrada.type.name;
-    typesRow.appendChild(badge);
-});
+        const badge = document.createElement('span');
+        badge.className = `type-badge type-${entrada.type.name}`;
+        badge.textContent = entrada.type.name;
+        typesRow.appendChild(badge);
+    });
 
-const estatisticaHp = dados.stats.find(function (estatistica) {
-    return estatistica.stat.name === 'hp';
-});
+    const estatisticaHp = dados.stats.find(function (estatistica) {
+        return estatistica.stat.name === 'hp';
+    });
 
     pokemonHeight.textContent = (dados.height / 10).toFixed(1) + ' m';
     pokemonWeight.textContent = (dados.weight / 10).toFixed(1) + ' kg';
@@ -70,30 +70,30 @@ async function handleBusca() {
     const valorBusca = searchInput.value.trim().toLowerCase();
 
     if (!valorBusca) {
-    searchInput.focus();
-    return;
-}
+        searchInput.focus();
+        return;
+    }
 
     searchButton.disabled = true;
-        ocultarElemento(resultArea);
-        ocultarElemento(errorArea);
-        exibirElemento(loadingArea);
+    ocultarElemento(resultArea);
+    ocultarElemento(errorArea);
+    exibirElemento(loadingArea);
 
-        try {
+    try {
         const dados = await buscarPokemon(valorBusca);
-    exibirResultado(dados);
-} catch (erro) {
-    exibirErro('Pokémon não encontrado. Verifique o nome ou número e tente novamente.');
-} finally {
-    searchButton.disabled = false;
-    ocultarElemento(loadingArea);
-}
+        exibirResultado(dados);
+    } catch (erro) {
+        exibirErro('Pokémon não encontrado. Verifique o nome ou número e tente novamente.');
+    } finally {
+        searchButton.disabled = false;
+        ocultarElemento(loadingArea);
+    }
 }
 
 searchButton.addEventListener('click', handleBusca);
 
 searchInput.addEventListener('keydown', function (evento) {
-if (evento.key === 'Enter') {
-    handleBusca();
-}
+    if (evento.key === 'Enter') {
+        handleBusca();
+    }
 });

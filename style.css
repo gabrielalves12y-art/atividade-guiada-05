@@ -1,7 +1,9 @@
 body {
-background-image: url('img/WhatsApp\ Image\ 2026-04-09\ at\ 14.34.18.jpeg');
-background-repeat: no-repeat;
-background-size: cover;
+    background-image: url('img/WhatsApp\ Image\ 2026-04-09\ at\ 14.34.18.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
 }
 
 .corpodapokedex {
@@ -13,7 +15,7 @@ background-size: cover;
     padding: 20px;
     border: black solid 2px;
     border-radius: 5%;
-    width: 600px;
+    width: 500px;
     height: 700px;
     margin: 0 auto;
     margin-top: 70px;
@@ -28,7 +30,7 @@ background-size: cover;
     padding: 20px;
     border-radius: 5%;
     width: 350px;
-    height: 260px;
+    height: 400px;
     margin-top: 30px;
 }
 
@@ -85,7 +87,7 @@ p {
 }
 
 #result-area {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -93,6 +95,10 @@ p {
 
 #result-area.visivel {
     display: flex;
+}
+
+#result-area.oculto {
+    display: none;
 }
 
 #pokemon-sprite {
@@ -138,21 +144,108 @@ p {
     letter-spacing: 0.3px;
 }
 
-.type-fire,    .tipo-fogo      { background-color: #FAECE7; color: #993C1D; }
-.type-water,   .tipo-agua      { background-color: #E6F1FB; color: #185FA5; }
-.type-grass,   .tipo-grama     { background-color: #EAF3DE; color: #3B6D11; }
-.type-electric,.tipo-eletrico  { background-color: #FAEEDA; color: #854F0B; }
-.type-psychic, .tipo-psiquico  { background-color: #FBEAF0; color: #993556; }
-.type-ice,     .tipo-gelo      { background-color: #E6F1FB; color: #0C447C; }
-.type-dragon,  .tipo-dragao    { background-color: #EEEDFE; color: #3C3489; }
-.type-dark,    .tipo-trevas    { background-color: #D3D1C7; color: #2C2C2A; }
-.type-fairy,   .tipo-fada      { background-color: #FBEAF0; color: #72243E; }
-.type-poison,  .tipo-veneno    { background-color: #EEEDFE; color: #534AB7; }
-.type-fighting,.tipo-lutador   { background-color: #FAECE7; color: #712B13; }
-.type-ground,  .tipo-terra     { background-color: #FAEEDA; color: #633806; }
-.type-rock,    .tipo-pedra     { background-color: #D3D1C7; color: #444441; }
-.type-bug,     .tipo-inseto    { background-color: #EAF3DE; color: #27500A; }
-.type-ghost,   .tipo-fantasma  { background-color: #EEEDFE; color: #26215C; }
-.type-steel,   .tipo-ferro     { background-color: #D3D1C7; color: #5F5E5A; }
-.type-flying,  .tipo-voador    { background-color: #E6F1FB; color: #0C447C; }
-.type-normal                   { background-color: #F1EFE8; color: #444441; }
+.type-fire {
+    background-color: #FAECE7;
+    color: #993C1D;
+}
+
+.type-water {
+    background-color: #E6F1FB;
+    color: #185FA5;
+}
+
+.type-grass {
+    background-color: #EAF3DE;
+    color: #3B6D11;
+}
+
+.type-electric {
+    background-color: #FAEEDA;
+    color: #854F0B;
+}
+
+.type-psychic {
+    background-color: #FBEAF0;
+    color: #993556;
+}
+
+.type-ice {
+    background-color: #E6F1FB;
+    color: #0C447C;
+}
+
+.type-dragon {
+    background-color: #EEEDFE;
+    color: #3C3489;
+}
+
+.type-dark {
+    background-color: #D3D1C7;
+    color: #2C2C2A;
+}
+
+.type-fairy {
+    background-color: #FBEAF0;
+    color: #72243E;
+}
+
+.type-poison {
+    background-color: #EEEDFE;
+    color: #534AB7;
+}
+
+.type-fighting {
+    background-color: #FAECE7;
+    color: #712B13;
+}
+
+.type-ground {
+    background-color: #FAEEDA;
+    color: #633806;
+}
+
+.type-rock {
+    background-color: #D3D1C7;
+    color: #444441;
+}
+
+.type-bug {
+    background-color: #EAF3DE;
+    color: #27500A;
+}
+
+.type-ghost {
+    background-color: #EEEDFE;
+    color: #26215C;
+}
+
+.type-steel {
+    background-color: #D3D1C7;
+    color: #5F5E5A;
+}
+
+.type-flying {
+    background-color: #E6F1FB;
+    color: #0C447C;
+}
+
+.type-normal {
+    background-color: #F1EFE8;
+    color: #444441;
+}
+
+@media (min-width: 768px) {
+    .login {
+        width: 70%;
+        margin: 20px auto;
+    }
+    
+}
+
+@media (min-width: 1920px) {
+    .login {
+        width: 40%;
+        margin: 20px auto;
+    }
+    
+}
