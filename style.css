@@ -1,12 +1,9 @@
-* {
-    box-sizing: border-box;
-
+body {
+background-image: url('img/WhatsApp\ Image\ 2026-04-09\ at\ 14.34.18.jpeg');
+background-repeat: no-repeat;
+background-size: cover;
 }
 
-{
-    background-image: url('');
-    background-size: cover;
-}
 .corpodapokedex {
     display: flex;
     flex-direction: column;
@@ -16,7 +13,10 @@
     padding: 20px;
     border: black solid 2px;
     border-radius: 5%;
-    width: 500px;
+    width: 600px;
+    height: 1000px;
+    margin: 0 auto;
+    margin-top: 70px;
 }
 
 p {
@@ -45,9 +45,43 @@ p {
     margin-top: 15px;
     padding: 5px 16px;
     background-color: floralwhite;
-    color: white;
+    color: black;
     border: black solid 2px;
     border-radius: 5px;
     cursor: pointer;
 
 }
+
+.types-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.type-badge {
+    font-size: 12px;
+    font-weight: 600;
+    padding: 4px 14px;
+    border-radius: 100px;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+}
+
+.tipo-fogo     { background-color: #FAECE7; color: #993C1D; }
+.tipo-agua    { background-color: #E6F1FB; color: #185FA5; }
+.tipo-grama    { background-color: #EAF3DE; color: #3B6D11; }
+.tipo-eletrico { background-color: #FAEEDA; color: #854F0B; }
+.tipo-psiquico  { background-color: #FBEAF0; color: #993556; }
+.tipo-gelo      { background-color: #E6F1FB; color: #0C447C; }
+.tipo-dragao  { background-color: #EEEDFE; color: #3C3489; }
+.tipo-trevas     { background-color: #D3D1C7; color: #2C2C2A; }
+.tipo-fada    { background-color: #FBEAF0; color: #72243E; }
+.tipo-veneno   { background-color: #EEEDFE; color: #534AB7; }
+.tipo-lutador { background-color: #FAECE7; color: #712B13; }
+.tipo-terra   { background-color: #FAEEDA; color: #633806; }
+.tipo-pedra     { background-color: #D3D1C7; color: #444441; }
+.tipo-inseto      { background-color: #EAF3DE; color: #27500A; }
+.tipo-fantasma    { background-color: #EEEDFE; color: #26215C; }
+.tipo-ferro    { background-color: #D3D1C7; color: #5F5E5A; }
+.tipo-voador   { background-color: #E6F1FB; color: #0C447C; }
+.tipo-normal   { background-color: #F1EFE8; color: #444441; }
